@@ -1,0 +1,7 @@
+st-pages
+streamlit
+streamlit-chat
+streamlit-scrollable-textbox
+openpyxl
+openai
+beautifulsoup4==4.11.1

@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  langchain_bot_ui:
+    build: .
+    restart: always
+    volumes:
+      - ../scrapercodegen:/scrapercodegen
+    environment:
+      - PYTHONUNBUFFERED=1
+    command:
+      - bash
+      - -c
+      - |
+        cd /scrapercodegen
+        streamlit run home.py --server.port 8675 --logger.level=debug --server.enableCORS false
+        echo "commands over"
+    ports:
+      - 8675:8675
